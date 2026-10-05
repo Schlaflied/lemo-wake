@@ -78,6 +78,8 @@ Then look at the parts together and fix what is ragged (missing hair, halos, a b
 ```bash
 $S/scripts/sheet.py <proj>/parts.png --parts <src>                  # cut-outs on a checkerboard, masks over the image, plates, depth
 ```
+To hand the parts over for reuse (After Effects, Figma, a game engine), export them as a layer pack: `$S/scripts/export_layers.py <src> --out <proj>/layers-pack` writes PNG layers (cut-outs cropped, stacked far to near by depth) plus `layers.json` with position, size, stacking order and depth. Text comes out as a picture layer, not an editable one.
+
 Flat images (charts, logos, UI, text cards) are often cleaner rebuilt in code; photos, real people and specific products come from the source, lifted out with the models.
 
 ```bash
